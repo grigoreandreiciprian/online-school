@@ -6,6 +6,8 @@ import Course from "../models/course.js";
 
 import Enrolment from "../models/enrolment.js";
 
+import blog from "../models/blog.js";
+
 import Role from "../models/Role.js";
 
 import dotenv from "dotenv"
@@ -34,6 +36,8 @@ const conectDb =  () =>{
             db.models.Course=Course(sequelize);
 
             db.models.Enrolment=Enrolment(sequelize);
+
+            db.models.blog=blog(sequelize)
 
            db.models.Role= Role(sequelize)
 

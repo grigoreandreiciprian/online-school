@@ -12,6 +12,8 @@ import courses from "./routes/coursesRoute.js"
 
 import enrolmentRouter from"./routes/enrolmentRoute.js"
 
+import blogRouter from './routes/blogRoute.js'
+
 import path from 'path'
 
 dotenv.config();
@@ -25,6 +27,7 @@ app.use(cors());
     app.use("/api/v1/users",userRouter);
     app.use('/api/v1/courses',courses);
     app.use('/api/v1/enrolment',enrolmentRouter);
+    app.use('/api/v1/blogs',blogRouter)
 
     const dirname= path.resolve();
 
