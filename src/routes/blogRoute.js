@@ -1,6 +1,6 @@
 import express from "express";
 
-import { getAll, addBlog, deleteBlog} from "../controllers/blogController.js"
+import { getAll, addBlog, deleteBlog, updateBlog} from "../controllers/blogController.js"
 import protect from "./../middleware/autetificareMiddleware.js";
 
 import errorHandler from "./../middleware/errorMiddleware.js"
@@ -14,6 +14,7 @@ blogRouter.route("/")
 .post(addBlog,errorHandler)
 
 blogRouter.route("/:id").delete(deleteBlog,errorHandler)
+.put(updateBlog, errorHandler)
 
 
 

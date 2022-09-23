@@ -39,5 +39,22 @@ const deleteBlog= asyncHandler((async(req,res)=>{
 }))
 
 
+const updateBlog= asyncHandler((async(req,res)=>{
+    let {id} = req.params
 
-export {getAll,addBlog, deleteBlog}
+    let blog= await db.models.blog.findByPk(id)
+
+    let obj = req.body
+
+    if(blog){
+
+        blog.set(obj)
+    }
+    blog.save()
+
+    res.status(204).end()
+}))
+
+
+
+export {getAll,addBlog, deleteBlog, updateBlog}
