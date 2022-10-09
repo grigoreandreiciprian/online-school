@@ -14,7 +14,10 @@ export default (sequelize) =>{
         primaryKey:true
     },
 
+    picture:{
 
+        type:Sequelize.BLOB("long")
+    },
     firstName:{
         type:Sequelize.STRING,
         allowNull:false,
@@ -29,6 +32,7 @@ export default (sequelize) =>{
             }
         }
     },
+
 
     lastName:{
         type:Sequelize.STRING,
@@ -75,11 +79,6 @@ export default (sequelize) =>{
                 msg:"Provide a value to age"
             }
         }
-    },
-
-    profilePicture:{
-        type:Sequelize.STRING,
-        allowNull:true,
     },
 
     password:{

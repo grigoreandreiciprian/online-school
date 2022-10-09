@@ -14,17 +14,24 @@
     "basic-auth": "^2.0.1",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
+    "express-fileupload": "^1.4.0",
+    "express-multipart": "^1.0.6",
     "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
     "path": "^0.12.7",
     "sequelize": "^6.17.0",
-    "sequelize-virtual-fields": "^1.1.1"
+    "sequelize-virtual-fields": "^1.1.1",
+    "sharp": "^0.31.0",
+    "uuid": "^9.0.0"
   },
   "type": "module"
 }

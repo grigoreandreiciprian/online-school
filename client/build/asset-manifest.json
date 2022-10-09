@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.72777b92.css",
-    "main.js": "/static/js/main.a6433d09.js",
+    "main.css": "/static/css/main.85953815.css",
+    "main.js": "/static/js/main.7c286799.js",
     "static/media/background.jpg": "/static/media/background.3d7e7027f7518bf97117.jpg",
     "static/media/teacher1.png": "/static/media/teacher1.c9cb7a8525c7ac2cff04.png",
     "static/media/GirlStudent.png": "/static/media/GirlStudent.63a56b03d8edffbb26e0.png",
+    "static/media/introImg.png": "/static/media/introImg.8d82d462c25359000e71.png",
     "static/media/profile.png": "/static/media/profile.707772ee7ccec8f7d87e.png",
     "static/media/formBackground.jpg": "/static/media/formBackground.e4814c69c30040fbe09b.jpg",
     "static/media/loginImage.jpg": "/static/media/loginImage.faaf633fbbe6df582ba8.jpg",
     "static/media/blogImg.jpg": "/static/media/blogImg.bf84d6e81aa2d57ae672.jpg",
+    "static/media/background2.jpg": "/static/media/background2.5254b6120aa446921501.jpg",
     "static/media/WhiteLogo.png": "/static/media/WhiteLogo.9f31021472ceffdf81e5.png",
     "static/media/writing.jpg": "/static/media/writing.0b9e301c4aaec6ba772a.jpg",
     "static/media/teacher2.jpg": "/static/media/teacher2.4f72809dc8eba5eff2e6.jpg",
     "static/media/LogoBlack.png": "/static/media/LogoBlack.f78b791bdc7da799f0a2.png",
     "index.html": "/index.html",
-    "main.72777b92.css.map": "/static/css/main.72777b92.css.map",
-    "main.a6433d09.js.map": "/static/js/main.a6433d09.js.map"
+    "main.85953815.css.map": "/static/css/main.85953815.css.map",
+    "main.7c286799.js.map": "/static/js/main.7c286799.js.map"
   },
   "entrypoints": [
-    "static/css/main.72777b92.css",
-    "static/js/main.a6433d09.js"
+    "static/css/main.85953815.css",
+    "static/js/main.7c286799.js"
   ]
 }

@@ -31,13 +31,28 @@ export default (sequelize) =>{
 
     
 
+    creatorId:{
+        type:Sequelize.INTEGER,
+        allowNull:false,
+
+        validate:{
+            notNull:{
+                msg:"Provide a value to Create"
+            },
+
+            notEmpty:{
+                msg:"Provide a value to create" 
+            }
+        }
+    },
+
     createdBy:{
         type:Sequelize.STRING,
         allowNull:false,
 
         validate:{
             notNull:{
-                msg:"Provide a value to Create"
+                msg:"Provide a value to Creator"
             },
 
             notEmpty:{

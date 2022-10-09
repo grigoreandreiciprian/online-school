@@ -77,6 +77,11 @@ export default (sequelize) =>{
         }
     },
 
+    picture:{
+
+        type:Sequelize.BLOB("long"),        
+    },
+
 },{
 
     sequelize,
