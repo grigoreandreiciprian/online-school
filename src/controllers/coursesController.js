@@ -1,70 +1,68 @@
 import asyncHandler from "express-async-handler";
 
+import db from "./../config/db.js";
 
-import db from "./../config/db.js"
+const getAll = asyncHandler(async (req, res) => {
+  let courses = await db.models.Course.findAll();
 
+  res.status(200).json(courses);
+});
 
+const addCourse = asyncHandler(async (req, res) => {
+  // let course= await db.models.Course.build({
 
+  //     courseName:req.body.courseName,
+  //     department:req.body.department,
+  //     createdBy:req.body.createdBy
+  // })
 
+  let obj = req.body;
 
+  await db.models.Course.create(obj);
 
+  res.status(204).end();
+});
 
-const getAll= asyncHandler((async(req,res)=>{
+const deleteCourse = asyncHandler(async (req, res) => {
+  let { id } = req.params;
 
-   
-    let courses= await db.models.Course.findAll();
+  let course = await db.models.Course.findByPk(id);
 
+  if (course) {
+    await course.destroy();
+  }
 
-    res.status(200).json(courses)
-}))
+  res.status(204).end();
+});
 
+const updateCourse = asyncHandler(async (req, res) => {
+  let { id } = req.params;
 
-const addCourse= asyncHandler((async(req,res)=>{
+  let course = await db.models.Course.findByPk(id);
 
-    // let course= await db.models.Course.build({
+  let obj = req.body;
 
-    //     courseName:req.body.courseName,
-    //     department:req.body.department,
-    //     createdBy:req.body.createdBy
-    // })
+  if (course) {
+    course.set(obj);
+  }
+  course.save();
 
-    let obj= req.body
+  res.status(204).end();
+});
 
-    await db.models.Course.create(obj)
+const uploadCoursePhoto = asyncHandler(async (req, res) => {
+  let { id } = req.params;
 
-  
-    res.status(204).end()
-}))
+  let course = await db.models.Course.findByPk(id);
 
+  if (course) {
+    course.set({
+      creatorPicture: req.body,
+    });
 
-const deleteCourse= asyncHandler((async(req,res)=>{
-    let {id}= req.params
+    course.save();
+  }
+  res.status(200).send("upload succes");
+});
 
-    let course= await db.models.Course.findByPk(id)
-
-    if(course){
-      
-        await course.destroy()          
-    }
-
-    res.status(204).end();
-}))
-
-
-const updateCourse= asyncHandler((async(req,res)=>{
-    let {id} = req.params
-
-    let course= await db.models.Course.findByPk(id)
-
-    let obj = req.body
-
-    if(course){
-
-        course.set(obj)
-    }
-    course.save()
-
-    res.status(204).end()
-}))
-
-export {getAll,addCourse,deleteCourse,updateCourse}
+export { getAll, addCourse, deleteCourse, updateCourse, uploadCoursePhoto };
